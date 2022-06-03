@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+   font-weight: 400;
+   color: white;
+}
+
+main {
+    padding-top: 120px ;
+    padding-bottom: 40px ;
+    background-color: #121116;
+}
+
+.container {
+    max-width: 1170px;
+    width: 35%;
+    margin: 0 auto;
+}
+
+.logo {
+    text-align: center;
+    padding-bottom: 48px;
+}
+
+.kasper-logo {
+    width: 120px;
+    height: 40px;
+}
+
+.text-message {
+    font-family: "Open sans" ;
+    font-size: 20pt;
+    margin: 0 auto;
+    max-width: 280px;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid white;
+    letter-spacing: 0.1em; 
+}
+
+.social-networks {
+    max-width: 260px;
+    text-align: center;
+    padding: 20px 0px;
+    margin: 0 auto; 
+}
+
+.social-networks img {
+    margin: 20px 20px;
+}
+
+.footer {
+    font-size: 15pt;
+    padding-top: 80px;
+    text-align: center;
+}
+span {
+    color: #19c8fa;
+}
