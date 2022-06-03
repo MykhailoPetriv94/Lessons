@@ -17,7 +17,7 @@ main {
 
 .container {
     max-width: 1170px;
-    width: 35%;
+    width: 65%;
     margin: 0 auto;
 }
 
@@ -27,25 +27,27 @@ main {
 }
 
 .kasper-logo {
-    width: 120px;
-    height: 40px;
+    width: 112px;
+    height: 36px;
 }
 
 .text-message {
     font-family: "Open sans" ;
-    font-size: 20pt;
+    font-size: 27px;
     margin: 0 auto;
     max-width: 280px;
     padding: 20px;
     text-align: center;
-    border-bottom: 2px solid white;
+    border-bottom: 1px solid white;
     letter-spacing: 0.1em; 
 }
 
+.text-message p {
+    display: inline-block;
+}
+
 .social-networks {
-    max-width: 260px;
     text-align: center;
-    padding: 20px 0px;
     margin: 0 auto; 
 }
 
