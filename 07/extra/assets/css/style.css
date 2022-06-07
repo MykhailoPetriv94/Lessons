@@ -5,15 +5,16 @@
 }
 
 body {
+    font-size: 0px;
     color: white;
-    font-family: 'Lucida Sans Unicode' sans-serif;
+    font-family: 'Lucida Sans Unicode', sans-serif;
 }
 
 .main {
     border: 25px solid #2B81AC;
     background-color: #3399CC;
     padding-top: 120px;
-    padding bottom: 130px;
+    padding-bottom: 130px;
 }
 
 .container {
@@ -29,7 +30,7 @@ h1 {
 }
 
 .weather {
-    border: 2px solid white;
+    border: 1px solid white;
 }
 
 .weather-type {
@@ -37,29 +38,54 @@ h1 {
     padding-top: 26px;
     padding-bottom: 27px;
     text-align: center;
-    width: calc(25% - 4px);
+    width: 25%;
     display: inline-block;
+    min-height: 100%;
+}
+
+.weather-type:hover {
+    opacity: 0.7;
+    cursor: pointer;
 }
 
 .weather-type p {
     font-family: 'Lucida Sans Unicode' ;
     font-size: 22px;
     line-height: 26px;
+    margin-bottom: 19px ;
 }
 
-.weather-type .cels {
+.weather-type .celsium {
     color: rgba(255, 255, 255, 0.7);
-    margin-top: 19px;
+    vertical-align: middle;
+}
+
+.weather-type .info {
+    line-height: 50px;
+}
+
+.weather-type .info img {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.weather-type .info p {
+    margin-right: 9px;
+    display: inline-block;
+}
+
+.weather-type .info .once {
+    height: 47px;
+    width: 48px;
 }
 
 .bottom-caption {
     padding-top: 35px;
-    padding-bottom: 115px;
     font-size: 16px;
     line-height: 19px;
 }
 .middle {
-    width: calc(50% - 4px);
+    width: 50%;
 }
 .big {
     width: 100%;
