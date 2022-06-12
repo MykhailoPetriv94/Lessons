@@ -1,0 +1,108 @@
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+	line-height: 1;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    font-size: 22px;
+}
+
+.header .container {
+    padding-top: 13px;
+    line-height: 53px;
+}
+
+.header .eng {
+    font-family: 'Tourney', Arial, Helvetica, sans-serif;
+    font-weight: 600px;
+    line-height: 18px;
+    letter-spacing: 0.04em;
+}
+
+.header .navigation {
+    font-family: 'Staatliches', cursive;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+.header .raw {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 30px;
+    
+}
+
+.header .eng {
+    margin-right: 50px;
+}
+
+.header .logo {
+    float: right;
+}
+
+.header .navigation span{
+    padding: 0 10px;
+}
+
+.main {
+    padding-bottom: 90px;
+}
+
+.main .general {
+    margin-top: 70px;
+    margin-bottom: 40px;
+}
+
+.main .title {
+    font-family: 'Francois One', sans-serif;
+    font-size: 36px;
+    line-height: 48px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    display: inline-block;
+    
+}
+
+.main .chapter {
+    font-family: 'Farro', sans-serif !important;
+    font-weight: 300;
+    vertical-align: top;
+    font-size: 16px;
+    padding-left: 10px;
+    display: inline-block;
+}
+
+
+.main .text-info {
+    font-size: 28px;
+    line-height: 50px;
+    font-family: 'PT Sans';
+}
+
+.main .text-info b {
+    font-weight: 700;
+}
+
+.main .text-info i {
+    font-style: italic;
+}
+
+.main .text-info p+p{
+    padding-top: 40px;
+}
+
+.main .text-info .gray {
+    background-color: #DADADA;
+}
