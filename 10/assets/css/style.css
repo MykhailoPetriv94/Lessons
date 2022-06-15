@@ -30,12 +30,11 @@ ol, ul {
     max-width: 1200px;
 }
 
-#opportunities {
-    background-image: url("https://github.com/MykhailoPetriv94/Lessons/10/assets/images/background.png");
-    background-repeat: no-repeat;
+.bg {
+    background-image: url(../images/background.png);
     background-position: bottom;
-    background-color: white;
-    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 .title {
