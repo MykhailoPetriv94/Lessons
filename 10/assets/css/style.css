@@ -1,0 +1,179 @@
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Gotham";
+    font-style: normal;
+    font-weight: 700;
+    src:url(../fonts/Gotham/gotham_bold.otf);
+}
+
+main {
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+#opportunities {
+    background-image: url("https://github.com/MykhailoPetriv94/Lessons/10/assets/images/background.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-color: white;
+    background-size: contain;
+}
+
+.title {
+    display: flex;
+    width: 539px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding-bottom: 50px;
+}
+
+.container_opp {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: auto;
+    align-content: start;
+    margin-bottom: 70px;
+}
+
+.element_opp {
+    flex: 0 0 auto;
+    width: 270px;
+}
+
+.element_opp .name_opp {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 27px;
+    padding-top: 30px;
+    padding-bottom: 16px;
+}
+
+.element_opp .info_opp {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.button_signup {
+    display: flex;
+    justify-content: center;
+}
+
+.button_signup a {
+    color: white;
+    background: #FF9900;
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    border-radius: 4px;
+    padding: 13px 39.5px;
+    margin-bottom: 75px;
+}
+
+footer {
+    border-top: 1px solid rgba(188, 208, 229, 0.496913);
+    padding-top: 70px;
+    padding-bottom: 72px;
+}
+
+footer .container_last_info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer .form_footer {
+    width: 340px;
+}
+
+footer .form_footer input {
+    width: 340px;
+    height: 50px;
+    outline: none;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border: 1px solid #BCD0E5;
+    border-radius: 4px;
+    padding: 0px 10px;
+}
+
+footer .form_footer input::placeholder {
+    color: #BCD0E5;
+}
+
+footer .form_footer button {
+    width: 180px;
+    height: 50px;
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    border: none;
+    background: #FF9900;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+}
+
+footer .form-footer button:hover,
+.button_signup a:hover {
+    background: #fdba56;
+}
+
+footer h2 {
+    font-family: "Gotham";
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: #2F281E;
+}
+
+footer li a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    color: #544837;
+    list-style-type: none;
+}
+
+footer li a:hover {
+    color: #FF9900;
+}
+
+footer .navigation_footer h2 {
+    margin-bottom: 30px;
+}
+
+footer .navigation_footer li:not(:last-child) {
+    margin-bottom: 18px;
+}
