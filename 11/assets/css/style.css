@@ -1,0 +1,332 @@
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #545454;
+    background: #E5E5E5;
+}
+
+h2 {
+    color: #1C1C1C;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+hr {
+    border: 1px solid #E4E4E4;
+}
+
+label {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+}
+
+input,
+select {
+    height: 38px;
+    outline: none;
+    border: 1px solid #E4E4E4;
+    border-radius: 6px;
+    padding: 0px 10px;
+    margin-bottom: 7px;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    color: #545454;
+}
+
+input:focus,
+select:focus,
+a:focus {
+    outline: none;
+    border: 1px solid #007BFF;
+}
+
+input:hover,
+select:hover {
+    border: 1px solid #007BFF;
+}
+
+button:focus {
+    outline: none;
+    filter: drop-shadow(0 0 0.1rem #007BFF);
+}
+
+a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+a:hover {
+    color: orangered;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 55px auto;
+}
+
+.container_flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.form_container {
+    width: 570px;
+    padding: 35px 34px 16px 34px;
+    background: #FFFFFF;
+    border-radius: 6px;
+}
+
+form .elements {
+    margin-bottom: 20px;
+}
+
+form label {
+    display: inline-block;
+    width: 245px;
+    padding-bottom: 7px;
+}
+
+form input[type="text"],
+select,
+option {
+    width: 245px;
+}
+
+form label+input[type="email"] {
+    width: 100%;
+}
+
+form .elements .notes {
+    color: #969696;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: -0.1px;
+}
+
+
+.input div:first-child {
+    margin-right: 10px;
+}
+
+.input {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.radio_content {
+    max-width: 80px;
+    padding-bottom: 0px;
+}
+
+.radio_element .radio_content {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    padding-left: 35px;
+}
+
+.radio_content input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.radio_content .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background: white;
+    border: 1px solid #E4E4E4;
+    border-radius: 50%;
+}
+
+.radio_content:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+.radio_content input:checked~.checkmark {
+    background-color: #007BFF;
+}
+
+.radio_content .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.radio_content input:checked~.checkmark:after {
+    display: block;
+}
+
+.radio_content .checkmark:after {
+    top: 5px;
+    left: 5px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+.radio_content>input[type="radio"]:focus+.checkmark {
+    filter: drop-shadow(0 0 0.1rem #007BFF);
+}
+
+.button_submit {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+}
+
+.signup {
+    width: 100%;
+    padding: 7px 50px;
+}
+
+.update {
+    padding: 7px 50px;
+}
+
+.button_submit:hover {
+    background-color: #2a8ffc
+}
+
+.country {
+    color: #969696;
+    cursor: pointer;
+}
+
+.country>option {
+    color: #545454;
+}
+
+.message {
+    width: 410;
+    text-align: center;
+}
+
+.message a {
+    font-family: 'Inter', sans-serif;
+}
+
+.login {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 15px;
+    line-height: 22px;
+}
+
+.login div {
+    margin: 20px;
+}
+
+.login p {
+    letter-spacing: -0.2px;
+}
+
+.login a {
+    font-weight: 500;
+    letter-spacing: -0.1px;
+}
+
+.profile .elements .add_content {
+    width: 138px;
+    margin-right: 5px;
+}
+
+.profile .elements .image_element {
+    margin-right: 20px;
+}
+
+.profile .elements .add_img {
+    display: flex;
+}
+
+.profile .elements .add_content,
+.button {
+    height: 30px;
+    outline: none;
+    border: 1px solid #E4E4E4;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.button {
+    background-color: white;
+    width: 30px;
+}
+
+.button img {
+    height: 12px;
+}
+
+.button:hover {
+    outline: none;
+    border: 1px solid #007BFF !important;
+}
+
+.add_content:hover {
+    outline: none;
+    border: 1px solid #007BFF !important;
+}
+
+.profile .elements .add_content input {
+    display: none;
+}
+
+.profile .elements .add_content img {
+    float: right;
+    margin: 6px;
+    display: inline;
+}
+
+.profile .elements .add_content span {
+    line-height: 30px;
+    padding-left: 10px;
+    overflow: hidden;
+}
+
+.profile .elements .add_content+p {
+    padding-top: 9px;
+}
+
+.profile .image {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.profile .elements .button_delete_photo {
+    padding-top: 3px;
+}
+
+input:invalid {
+    border: 1px solid red;
+}
