@@ -37,7 +37,7 @@ ol, ul {
     background-size: 100%;
 }
 
-.title {
+.title h2 {
     display: flex;
     width: 539px;
     font-weight: 700;
