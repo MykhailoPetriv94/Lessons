@@ -67,6 +67,7 @@ a:hover {
     font-weight: 600;
     text-transform: uppercase;
     text-align: center;
+    transition: 0.5s ease;
 }
 
 .nav__elements--hover:hover {
@@ -82,6 +83,7 @@ a:hover {
     height: 42px;
     padding: 10px 20px;
     border: 1px solid #3C3C3C;
+    transition: 1s ease;
 }
 
 .callback-button--hover:hover {
@@ -192,6 +194,7 @@ main {
     cursor: pointer;
     background-repeat: no-repeat;
     background-position: center;
+    transition: 0.8s ease;
 }
 
 .socials__elements:hover {

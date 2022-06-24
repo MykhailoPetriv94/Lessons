@@ -1,0 +1,155 @@
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color:  greenyellow;
+}
+
+@keyframes rotateCard {
+    from{
+        transform: rotateY(0deg);
+    }
+    50%{
+        transform: rotateY(180deg)
+    }
+    to{
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes rotateCardBack {
+    from{
+        transform: rotateY(180deg);
+    }
+    50%{
+        transform: rotateY(360deg)
+    }
+    to{
+        transform: rotateY(540deg);
+    }
+}
+
+.card__container {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.container {
+    height: 220px;
+    width: 150px;
+    display: inline-flex;
+    margin: 10px 3px;
+}
+
+.card {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    perspective: 1000px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    padding: 5px;
+    transition: transform .5s;
+    transform-style: preserve-3d;
+    transform-origin: right center;
+}
+
+.front__card,
+.shirt__back {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-radius:20px;
+    position: absolute;
+    transition: 1.5s;
+    backface-visibility:hidden;
+}
+
+.front__card {
+    border: 2px solid black;
+    display: inline-flex;
+    justify-content: space-between;
+    padding: 10px;
+    transform: rotateY(180deg);
+    background-color:white;
+}
+
+.front__card--hover:hover {
+    animation:none;
+    transform: rotateY(180deg);
+}
+
+
+.shirt__back--hover:hover {
+    animation:none;
+    transform: rotateY(360deg);
+
+}
+
+.front__card--animation {
+    animation: rotateCard 3s ease infinite;
+}
+
+.shirt__back--animation {
+    animation: rotateCardBack 3s ease infinite;
+}
+
+
+.front__card-suit {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    width: 30px;
+}
+
+.suit__name {
+    font-size: 30px;
+    line-height: 30px;
+}
+
+.suit_img {
+    width: 20px;
+}
+
+.front__card-all {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.all_img {
+    width: 60px;
+}
+.front__card-suit--rotate180 {
+    transform: rotate(180deg);
+    display: flex;
+    align-content: flex-end;
+
+}
+.shirt {
+    width: 100%;
+    height: 100%;
+}
+
+.front__card--animation--delay2s {
+    animation-delay: 2s
+}
+
+.shirt__back--animation--delay2s {
+    animation-delay: 2s
+}
+
+.front__card--animation--delay4s {
+    animation-delay: 4s
+}
+
+.shirt__back--animation--delay4s {
+    animation-delay: 4s
+}
