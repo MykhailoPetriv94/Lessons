@@ -20,6 +20,7 @@
 .header {
     border-bottom: 1px solid #EFEEF3;
 }
+
 .header__container,
 .main__container,
 .footer__container {
@@ -47,6 +48,7 @@
 .logo__text-white {
     color: var(--footer-text-color);
 }
+
 .logo__image {
     margin-right: 13px;
 }
@@ -58,6 +60,7 @@
 .title__container {
     margin-bottom: 40px;
 }
+
 .title__text {
     font-family: var(--font-text);
     font-style: normal;
@@ -83,25 +86,26 @@
     display: flex;
     justify-content: space-between;
 }
+
 .card__item {
     padding: 40px;
     transition: border-color 0.3s ease;
 }
 
 .card__item-logo {
-    border: 1px solid #1565D8;
+    border:1px solid #E5EAF4;
     border-radius: 16px;
     padding: 14px 0;
     width: 64px;
     height: 64px;
     text-align: center;
-    transition: fill 0.3s ease;  
+    transition: fill 0.3s ease;
 }
 
 .card__item:hover .card__item-logo {
-    border-color: #3DB370;
-    
+    border:1px solid #E5EAF4;
 }
+
 .logo__border {
     transition: all 0.3s ease;
     fill:#007FFC;
@@ -130,6 +134,7 @@
 .card__item:hover {
     border-color: #3DB370;
 }
+
 .card__item:hover .logo__background-1 {
     fill:#E1F4F5;
 }
@@ -149,6 +154,7 @@
 .card__item-text {
     margin: 30px 0;
 }
+
 .text-title,
 .text-note {
     color: var(--title-text-color);
@@ -162,6 +168,7 @@
     line-height: 21px;
     letter-spacing: 0.2px;
 }
+
 .text-note {
     font-size: 16px;
     line-height: 28px;
@@ -205,6 +212,7 @@ footer {
     height: 38px;
     cursor: pointer;
 }
+
 .socials__content-link {
     width: 20px;
     height: 20px;
