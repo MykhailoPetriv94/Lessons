@@ -1,0 +1,69 @@
+@mixin title {
+    font-size: 36px;
+    line-height: 1.5;
+    margin: 0 0 20px;
+    padding: 10px;
+}
+
+@mixin flex-center() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-center-column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@mixin flex-between() {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin container {
+    width: 90%;
+    margin: $margin;
+    max-width: $desktop;
+}
+
+@mixin font($fontF, $fontS, $fontW, $lineH) {
+    font-family: $fontF;
+    font-size: $fontS;
+    font-weight: $fontW;
+    line-height: $lineH;  
+}
+
+@mixin margin2s ($mrtb, $mrlr) {
+    margin-top: $mrtb;
+    margin-bottom: $mrtb;
+    margin-left: $mrlr;
+    margin-right: $mrlr;
+}
+
+
+@mixin padding2s ($pdtb, $pdlr) {
+    padding-top: $pdtb;
+    padding-bottom: $pdtb;
+    padding-left: $pdlr;
+    padding-right: $pdlr;
+}
+
+@mixin transition ($transition) {
+    transition: all $transition ease;
+    -webkit-transition: all $transition ease;
+    -moz-transition: all $transition ease;
+    -ms-transition: all $transition ease;
+    -o-transition: all $transition ease;
+}
+
+@mixin rotate ($rotate) {
+    transform: rotate($rotate);
+    -webkit-transform: rotate($rotate);
+    -moz-transform: rotate($rotate);
+    -ms-transform: rotate($rotate);
+    -o-transform: rotate($rotate);
+}
