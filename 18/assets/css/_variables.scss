@@ -1,0 +1,93 @@
+$desktop: 1170px;
+$tablet: 768px;
+$mobile: 580px;
+$margin: 0 auto;
+
+//fonts-type
+$font-logo: 'Lato', sans-serif;
+$font-title: 'Red Hat Display', sans-serif;
+$font-text: 'Lato', sans-serif;
+
+//font-weight
+$logo-FW: 400;
+$title-FW: 600;
+$text-FW: 400;
+
+//letter-spacing
+$logo-LS: 0.5em;
+$Htitle-LS: 0.05em;
+$title-LS: 0.1em;
+$text-LS: 0.05em;
+$Ftitle-LS: 0.05em;
+$contact-LS: 0.1em;
+$copy-LS: 0.1em;
+
+//colors
+$title-color: #000000;
+$text-color: #565656;
+$footer-color: #F4F4F4;
+
+//borders
+$socials-def: #ffffff;
+$socials-hov:#565656;
+$gray: 1px solid #565656; 
+
+
+//font-size
+
+//desktop
+$logoDesktop-FS: 16px;
+$HtitleDesktop-FS: 48px;
+$titleDesktop-FS: 28px;
+$textDesktop-FS: 19px;
+$FtitleDesktop-FS: 48px;
+$contactDesktop-FS: 16px;
+$copyDesktop-FS: 12px;
+
+//tablet
+$logoTablet-FS: 16px;
+$HtitleTablet-FS: 33px;
+$titleTablet-FS: 28px;
+$textTablet-FS: 19px; 
+$FtitleTablet-FS: 48px;  
+$contactTablet-FS: 16px;
+$copyTablet-FS: 12px;
+
+//mobile
+$logoMobile-FS: 16px;
+$htitleMobile-FS: 30px;
+$titleMobile-FS: 26px;
+$textMobile-FS: 16px;
+$FtitleMobile-FS: 32px;
+$contactMobile-FS: 18px;
+$copyMobile-FS: 16px;
+
+
+//line-height
+
+//desktop
+$logoDesktop-LH: 150%;
+$HtitleDesktop-LH: 133%;
+$titleDesktop-LH: 166%;
+$textDesktop-LH: 168%;
+$FtitleDesktop-LH: 133%;
+$contactDesktop-LH: 166%;
+$copyDesktop-LH: 166%;
+
+//tablet
+$logoTablet-LH : 150%;
+$HtitleTablet-LH: 152%;
+$titleTablet-LH: 166%;
+$textTablet-LH: 168%;
+$FtitleTablet-LH: 133%;
+$contactTablet-LH: 166%;
+$copyTablet-LH: 166%;
+
+//mobile
+$logoMobile-LH: 150%;
+$HtitleMobile-LH: 167%;
+$titleMobile-LH: 166%;
+$textMobile-LH: 200%;
+$FtitleMobile-LH: 42px;
+$contactMobile-LH: 166%;
+$copyMobile-LH: 166%;

@@ -1,0 +1,339 @@
+@import 'app.scss';
+
+.header {
+    .container {
+        @include container-left(0 auto, $desktop, left);
+        width: 1170px / 1440px * 100%;
+    }
+    &__container {
+        padding: 38px 0;
+
+        .logo {
+            @include font($font-text, $logoDesktop-FS, $logo-FW, $logoDesktop-LH, $logo-LS);
+            color: $title-color;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.main {
+    .container {
+        @include container-left(0 auto, $desktop, left);
+        width: 1170px / 1440px * 100%;
+
+        &__section {
+            
+            & + .section {
+                margin-top: 90px;
+            }
+
+            .heading {
+                @include font($font-title, $titleDesktop-FS, $title-FW, $titleDesktop-LH, $title-LS);
+                color:$title-color;
+                margin-bottom: 50px
+            }
+
+            .image {
+                margin-bottom: 20px;
+                width: 100%;
+
+                picture {
+                    width: 100%;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .section__text {
+                width: 100%;
+                
+                .description {
+                    @include font($font-text, $textDesktop-FS, $text-FW, $textDesktop-LH, $text-LS);
+                    color: $text-color;
+                    
+                    + .description {
+                        margin-top: 47px;
+                    }
+                }
+            }
+
+            .text__first {
+                width: 50%;
+            }
+        }
+    }
+    &__container {
+
+        &-title {
+            margin-bottom: 70px;
+
+            .title__text {
+                @include font($font-title, $HtitleDesktop-FS, $title-FW, $HtitleDesktop-LH, $Htitle-LS);
+                color: $title-color;
+            }
+        }
+
+        &-image {
+            width: 100%;
+            
+            picture {
+                width: 100%;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+        &-content {
+            padding: 90px 0;
+        }
+    }
+}
+
+.footer {
+    background-color: $footer-color;
+
+    &__container {
+        @include container-left (0 auto, $desktop, left);
+        padding: 70px 0 30px;
+        text-align: center;
+        width: 1170px / 1440px * 100%;
+        
+        .content {
+            @include flex-between;
+            margin-bottom: 20px;
+            
+            .title {
+                width: 80%;
+                @include flex-left-column;
+
+                h2 {
+                    @include font($font-title, $FtitleDesktop-FS, $text-FW, $FtitleDesktop-LH, $Ftitle-LS);
+                    color: $title-color;
+                    text-align: left;
+                }
+            }
+
+            .phone,
+            .email {
+                color: $title-color;
+                @include link;
+                @include font($font-text, $contactDesktop-FS, $text-FW, $contactDesktop-LH, $contact-LS);
+                text-align: left;
+            }
+
+            .phone {
+                margin: 30px 0 15px;
+            }
+
+            .socials {
+                width: 269px;
+                @include flex-between;
+
+                .socials__sign {
+                    @include transition(0.3s);
+                    @include flex-center;
+                    border: $gray;
+                    height: 50px;
+                    width: 50px;
+                    padding: 13px;
+                    background-color: $socials-def;
+
+                    &:hover {
+                        background-color: $socials-hov;
+                    }
+
+                    &:hover .socials__default {
+                        fill: $footer-color;
+                    }
+                    
+                    &__logo {
+                        height: 24px;
+
+                        .socials__default {
+                            fill: $socials-hov;
+                            @include transition(0.3s);
+                        }
+                    }
+                }
+            }
+        }
+
+        .copyright {
+            display: block;
+            color: $title-color;
+            @include font($font-text, $copyDesktop-FS, $text-FW, $copyDesktop-LH, $copy-LS);
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .main {
+        .container {
+            .section {
+                .text__first {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .header {
+        .container {
+            @include container-left(0 auto, $tablet, left);
+            width: 700px / 768px * 100%;
+        }
+
+        &__container {
+            padding: 18px 0;
+        }
+    }
+
+    .main {
+        .container {
+            padding-top: 50px;
+            @include container-left(0 auto, $tablet, left);
+            width: 700px / 768px * 100%;
+
+            .section {
+                & + .section {
+                    margin-top: 70px;
+                }
+            }
+        }
+        &__container {
+
+            &-title {
+                
+                .title__text {
+                    @include font($font-title, $HtitleTablet-FS, $title-FW, $HtitleTablet-LH, $Htitle-LS);
+                }
+                margin-bottom: 50px;
+            }
+        }    
+    }
+    .footer {
+        background-color: $footer-color;
+    
+        &__container {
+            @include flex-center-column;
+            padding: 50px 0 50px;
+            text-align: center;
+            width: 700px / 768px * 100%;
+            margin: 0 auto;
+            
+            .content {
+                @include flex-center-column;
+                margin-bottom: 40px;
+                
+                .title {
+                    width: 100%;
+                    @include flex-center-column;
+                    margin-bottom: 40px;
+                    
+                    h2 {
+                        text-align: center;
+                    }
+                }
+                .phone {
+                    margin: 20px 0 15px;
+                }
+            }
+        }
+    }    
+}
+
+@media screen and (max-width:500px) {
+    .header {
+        .container {
+            @include container-left(0 auto, $tablet, left);
+            width: 500px / 550px * 100%;
+        }
+        &__container {
+            padding: 18px 0;
+        }
+    }
+    .main {
+        .container {
+            padding-top: 0;
+            @include container-left(0 auto, $tablet, left);
+            width: 500px / 550px * 100%;
+
+            .section {
+                & + .section {
+                    margin-top: 70px;
+                }
+
+
+                .heading {
+                    @include font($font-title, $titleMobile-FS, $title-FW, $titleMobile-LH, $title-LS);
+                    margin-bottom: 40px
+                }
+    
+                .image {
+                    margin-bottom: 20px;
+                    width: 100%;
+    
+                    picture {
+                        width: 100%;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+    
+                .text {
+                    
+                    .description {
+                        @include font($font-text, $textMobile-FS, $text-FW, $textMobile-LH, $text-LS);
+                        
+                        + .description {
+                            margin-top: 40px;
+                        }
+                    }
+                }
+            }
+        }
+        &__container {
+
+            &-title {
+                margin-bottom: 40px;
+
+                .title__text {
+                    @include font($fontTitle, $htitleMobile-FS, $title-FW, $HtitleMobile-LH, $Htitle-LS);
+                }
+            }
+            &-content {
+                padding: 70px 0;
+            }
+        } 
+    }
+    .footer {
+        &__container {
+            width: 500px / 550px * 100%;            
+            
+            .content {
+                .title {
+                    width: 100%;
+                    @include flex-center-column;
+                    margin-bottom: 40px;
+                    
+                    h2 {
+                        text-align: center;
+                    }
+               
+                    .phone,
+                    .email {
+                        @include font($font-text, $contactMobile-FS, $text-FW, $contactMobile-LH, $contact-LS);
+                    }
+                }
+            }
+        }
+    }    
+}

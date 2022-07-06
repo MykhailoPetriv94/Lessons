@@ -1,0 +1,58 @@
+@mixin link {
+    text-decoration: none;
+}
+
+@mixin font($fontFamily, $fontSize, $fontWeight, $lineHeight, $letterSpacing) {
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    line-height: $lineHeight;
+    letter-spacing: $letterSpacing;
+}
+
+@mixin container-center($margin, $desktop, $center) {
+    width: 90%;
+    margin: $margin;
+    max-width: $desktop;
+    text-align: $center;
+}
+
+@mixin container-left($margin, $screen, $left) {
+    margin: $margin;
+    max-width: $screen;
+    text-align: $left;
+}
+
+@mixin flex-center() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-center-column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@mixin flex-left-column {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@mixin flex-between() {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin transition($time) {
+    transition: all $time ease;
+    -webkit-transition: all $time ease;
+    -moz-transition: all $time ease;
+    -ms-transition: all $time ease;
+    -o-transition: all $time ease;
+}
