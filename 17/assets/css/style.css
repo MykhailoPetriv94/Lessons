@@ -344,65 +344,52 @@
   .main__container {
     padding: 20px 0;
   }
-
   .main .header {
     width: 100%;
   }
-
   .main .header__title {
     margin: 15px 0;
     font-size: 38px;
   }
-
   .main .text__title {
     font-size: 14px;
   }
-
   .main .header .logo__border {
     width: 40px;
     height: 40px;
     margin: 0 10px;
   }
-
   .main .main__section {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
   }
-
   .main .main__section-first {
     width: 50%;
     padding: 0;
     margin-bottom: 20px;
   }
-
   .main .main__section-second {
     display: none;
   }
-
   .main .main__section-third {
     width: 100%;
     padding: 0;
   }
-
   .main .main__section-third .info__border {
     margin: 10px 0;
   }
-
   .main .main__section-third .socials {
     width: 50%;
     margin: 15px auto;
   }
-
   .main .main__section-third .socials .socials__sign {
     display: inline-flex;
   }
-
   .main .main__section-third .socials .socials__element {
     width: 30px;
   }
-
   .main .main__section-third .container__right-link {
     padding: 15px 30px;
     font-size: 20px;
