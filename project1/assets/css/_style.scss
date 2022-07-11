@@ -1,19 +1,25 @@
+.animate__animated.animate__pulse {
+    animation-iteration-count:infinite;
+    animation-duration: 1.5s;
+}
+
+//header
+
 .header {
-    background-image: url(../images/header/header_1920px.png);
+    width: 100%;
     background-position: center;
     background-repeat: no-repeat;
-    width: 100%;
+    background-image: url(../images/header/header_1920px.png);
 
     .header__container {
-        @include container($desktop1Cont);
         padding-top: 295px;
         padding-bottom: 120px;
         text-align: center;
+        @include container($desktop1Cont);
         @include max-width($desktop2) {
             width: $desktop2Cont / $desktop2 * 100%;
             max-width: $desktop2Cont;
         }
-
         @include max-width($desktop3) {
             width: $desktop3Cont / $desktop3 * 100%;
             max-width: $desktop3;
@@ -26,45 +32,40 @@
             width: $mobileCont / $mobile * 100%;
             max-width: $mobile;
         }
-        
-
         &-title {
             margin: 0px auto 8px auto;
             width: 301px;
 
             .title__text {
                 font-family: $Josef;
-                font-style: normal;
-                font-weight: 700;
                 font-size: 48px;
                 line-height: 52px;
+                font-weight: 700;
+                font-style: normal;
                 text-transform: uppercase;
-                color: $clText;
+                color: $textC;
             }
         }
-
         &-title1 {
             margin: 0px auto 48px auto;
             width: 352px;
 
             .title1__text {
-                font-family: $Joseffamily;
-                font-style: normal;
-                font-weight: 400;
+                font-family: $Josef;
                 font-size: 22px;
                 line-height: 28px;
+                font-weight: 400;
                 letter-spacing: 0.31em;
-                color: $clText;
+                font-style: normal;
+                color: $textC;
             }
         }
-        
         &-search {
+            margin: 0 auto;
             width: 647px;
             height: 60px;
             position: relative;
-            margin: 0 auto;
             @include transition(0.5s);
-
             @include max-width($tablet) {
                 width: $tabletCont;  
             }
@@ -72,75 +73,64 @@
                 width: 85%; 
             }
             
-
             .search__form {
-                width: 100%;
-                height: 100%;
-                padding: 20px 180px 20px 36px;
                 font-family: $Josef;
-                font-style: normal;
-                font-weight: 400;
                 font-size: 14px;
                 line-height: 20px;
+                font-weight: 400;
+                width: 100%;
+                height: 100%;
                 letter-spacing: 0.2em;
-                @include placeholder($placeholderC);
-                border: none;
-                outline: none;
+                padding: 20px 180px 20px 36px;
                 color: $placeholderC;
                 opacity: 1;
+                font-style: normal;
+                border: none;
+                outline: none;
+                @include placeholder($placeholderC);
                 @include max-width($mobile) {
-                    padding-left: 10px; 
-                    padding-right: 155px; 
                     font-size: 11px; 
+                    padding-left: 10px; 
+                    padding-right: 155px;
                 }
 
-                &:focus::-webkit-input-placeholder {
-                    opacity: 0;
-                    @include transition(0.3s);
-                }
-                &:focus::-moz-placeholder {
-                    opacity: 0;
-                    @include transition(0.3s);
-                }
-                &:focus:-moz-placeholder {
-                    opacity: 0;
-                    @include transition(0.3s);
-                }
+                &:focus::-webkit-input-placeholder,
+                &:focus::-moz-placeholder,
+                &:focus:-moz-placeholder,
                 &:focus:-ms-input-placeholder {
                     opacity: 0;
                     @include transition(0.3s);
-                }
             }
             .search__button {
-                cursor: pointer;
-                position: absolute;
-                top:4px;
-                right: 5px;
-                bottom: 4px;
                 height: 52px;
                 width: 139px;
-                background-color: $blueC;
+                top: 4px;
+                right: 5px;
+                bottom: 4px;
                 padding: 18px 24px;
+                background-color: $blueC;
                 display: flex;
-                justify-content: space-between;
                 align-items: center;
-                outline: none;
+                justify-content: space-between;
+                position: absolute;
                 border: none;
+                outline: none;
                 overflow: hidden;
+                cursor: pointer;
 
                 &:after {
-                    content: '';
-                    position: absolute;
                     top: -50%;
                     right: -50%;
                     bottom: -50%;
                     left: -70%;
-                    background: linear-gradient(to bottom, rgba(229, 172, 142, 0), rgba(255,255,255,0.5) 50%, rgba(229, 172, 142, 0));
+                    position: absolute;
+                    content: '';
                     transform: rotateZ(60deg) translate(-5em, 7.5em);
                     -webkit-transform: rotateZ(60deg) translate(-5em, 7.5em);
                     -moz-transform: rotateZ(60deg) translate(-5em, 7.5em);
                     -ms-transform: rotateZ(60deg) translate(-5em, 7.5em);
                     -o-transform: rotateZ(60deg) translate(-5em, 7.5em);
+                    background: linear-gradient(to bottom, rgba(229, 172, 142, 0), rgba(255,255,255,0.5) 50%, rgba(229, 172, 142, 0));
                 } 
                 &:hover:after, 
                 &:focus::after {
@@ -156,51 +146,50 @@
                 }
                 &-text {
                     font-family: $Aleo;
-                    font-style: normal;
-                    font-weight: 400;
                     font-size: 14px;
                     line-height: 20px;
+                    font-weight: 400;
                     letter-spacing: 0.1em;
+                    font-style: normal;
                     text-transform: uppercase;
                     color: $textC;
                 }
             }
         }
-
         &-scroll {
             margin: 211px auto 0;
             width: 105px;
             height: 40px;
             display: flex;
             flex-direction: column;
+            align-items: center;
             text-align: center;
             position: relative;
-            align-items: center;
-            cursor: pointer;
             text-decoration: none;
+            cursor: pointer;
 
             .scroll__text {
                 font-family: $Josef;
-                font-style: normal;
-                font-weight: 400;
                 font-size: 14px;
                 line-height: 20px;
+                font-weight: 400;
                 text-align: center;
                 letter-spacing: 0.2em;
+                font-style: normal;
                 color: $textC;
             }
 
             .scroll__chevron {
                 height: 100%;
-                position: relative;
                 width: 100%;
+                position: relative;
                 @include transition (1s);
                 @include flex-start;
                 
                 &-sign {
-                    fill: $textC;
-                    width:14px;
+                    width: 14px;
                     position: absolute;
+                    fill: $textC;
                     -moz-animation: slidedownup 1.5s infinite linear;
                     -webkit-animation: slidedownup 1.5s infinite linear;
                     -o-animation: slidedownup 1.5s infinite linear;
@@ -212,9 +201,9 @@
 }
 
 #burger {
-    visibility: hidden;
     position: absolute;
-    
+    visibility: hidden;
+   
     &:checked ~ .menu>.menu__container>.burger__button > .burger__button-content {
         background-color: transparent;    
     }
@@ -225,7 +214,7 @@
         -moz-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
         -o-transform: rotate(45deg);
-}
+    }
     &:checked ~ .menu>.menu__container>.burger__button > .burger__button-content::after {
         top: 0;
         transform: rotate(-45deg);
@@ -233,15 +222,15 @@
         -moz-transform: rotate(-45deg);
         -ms-transform: rotate(-45deg);
         -o-transform: rotate(-45deg);
-}
+    }
     &:checked ~ .menu>.menu__container-burger>.navigation__list {
         height: 214px;
+        top: -1px;
+        right: 0;
         padding: 32px 0;
         opacity: 1;
-        right: 0;
-        top: -1px;
-        background-color: $blueC;
         z-index: 2;
+        background-color: $blueC;
         
         &>.chapter>.link {
             color: $textC;
@@ -252,25 +241,25 @@
     }
 }
 
+//menu
+
 .menu {
-    background-color: $blueC;
     width: 100%;
-    @include container($xl);
-    width:100%;
-    .menu__container{
-            
-        @include container($desktop1Cont);
+    background-color: $blueC;
+    @include container($desktop1);
+  
+    .menu__container {
         padding-top: 32px;
         padding-bottom: 32px;
-        text-align: center;
         display: flex;
+        text-align: center;
         justify-content: space-between;
         position: relative;
+        @include container($desktop1Cont);
         @include max-width($desktop2) {
             width: $desktop2Cont / $desktop2 * 100%;
             max-width: $desktop2;
         }
-
         @include max-width($desktop3){
             width: $desktop3Cont / $desktop3 * 100%;
             max-width: $desktop3;
@@ -278,66 +267,61 @@
         @include max-width(819px) {
             flex-direction: column;
         }
-        @include maxWidth($tablet) {
+        @include max-width($tablet) {
+            flex-direction: column;
             width: $tabletCont / $tablet * 100%;
             max-width: $tablet;
-            flex-direction: column;
         }
-        @include maxWidth(620px){
+        @include max-width(620px) {
             flex-direction: row;
             align-items: center;
             justify-content: center;
         }
-        @include maxWidth($mobile){
+        @include max-width($mobile) {
             width: $mobileCont / $mobile * 100%;
             max-width: $mobile;
             
         }
 
         &-logo {
-            
             display: inline-flex;
             justify-content: center;
             align-items:center;
             
             &__text {
                 font-family: $Josef;
-                font-style: normal;
-                font-weight: 700;
                 font-size: 24px;
                 line-height: 28px;
+                font-weight: 700;
                 letter-spacing: 0.1em;
-                text-transform: uppercase;
-                color: $clText;
+                font-style: normal;
                 text-decoration: none;
+                text-transform: uppercase;
+                color: $textC;
             }
         }
 
         &-navigation {
-            @include flex-center;
-            
+            flex-wrap: wrap;
             overflow: hidden;
+            @include flex-center;
             @include max-width(819px) {
                 margin-top: 32px;
             }
             @include max-width(620px) {
                 display: none;
             }
-            flex-wrap: wrap;
-
             .navigation__list {
                 margin-left: 20px;
-                list-style: none;
                 display: inline-flex;
-
+                list-style: none;
                 @include max-width(819px) {
                     margin-left: 0;
                 }
-
                 .chapter {
-                    position: relative;
                     display: flex;
                     justify-content: center;
+                    position: relative;
                     overflow: hidden;
                     &:hover .line {
                         left: 0;
@@ -352,42 +336,41 @@
 
                 .link {
                     font-family: $Aleo;
-                    font-style: normal;
-                    font-weight: 400;
                     font-size: 14px;
                     line-height: 20px;
-                    align-items: center;
+                    font-weight: 400;
+                    font-style: normal;
                     letter-spacing: 0.1em;
-                    text-transform: uppercase;
-                    color: $textC;
-                    text-decoration: none;
+                    align-items: center;
                     position: relative;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    color: $textC;
 
                     .line {
-                        content:"";
-                        position: absolute;
-                        width: 100%;
-                        border-bottom: 1px solid $textC;
                         top: 19px;
                         left:-200px;
+                        width: 100%;
+                        border-bottom: 1px solid $textC;
                         box-shadow: 0px 0px 3px $textC;
+                        position: absolute;
+                        content:"";                       
                         @include transition (0.3s);
                     }
                 }
             }
         }
         .burger__button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
             width: 40px;
             height: 24px;
-            cursor: pointer;
-            
+            display: flex;
+            align-items: center;
+            justify-content: center;        
             position: absolute;
             opacity: 0;
             right: 0;
             visibility: hidden;
+            cursor: pointer;
 
             @include max-width(620px) {
                 position: absolute;
@@ -399,71 +382,71 @@
             & > .burger__button-content,
             & > .burger__button-content::before,
             & > .burger__button-content::after {
-                display: block;
-                position: absolute;
                 width: 100%;
                 height: 2px;
-                background-color: $textC;
+                display: block;
+                position: absolute;
                 transition-duration: .25s;
+                background-color: $textC;
             }
 
             .burger__button-content::before {
-                content: '';
                 top: -12px;
                 background-color: $textC;
+                content: '';
             }
             .burger__button-content::after {
-                content: '';
                 top: 12px;
                 background-color: $textC;
+                content: '';
             }   
         }
         &-burger {
             position: relative;
+
             .navigation__list {
-                display: flex;
-                justify-content: center;
-                align-items:center;
-                position: absolute;
-                flex-direction: column;
                 width: 100%;
                 height: 0;
                 margin: 0;
                 padding: 0;
                 list-style: none;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
                 background-color: $blueC;
-                @include transition(0.5s);
-                top:0px;
+                top: 0px;
                 opacity: 0;
                 z-index: -1;
+                @include transition(0.5s);
 
                 .link {
-                    display: flex;
                     font-family: $Aleo;
-                    font-style: normal;
-                    font-weight: 400;
                     font-size: 14px;
                     line-height: 20px;
+                    font-weight: 400;
+                    font-style: normal;
+                    letter-spacing: 0.1em;      
                     display: flex;
                     align-items: center;
-                    letter-spacing: 0.1em;
-                    text-transform: uppercase;
-                    color: transparent;
-                    text-decoration: none;
-                    transition-duration: .25s;
                     position: relative;
+                    text-transform: uppercase; 
+                    text-decoration: none;
+                    color: transparent;
                     overflow: hidden;
+                    transition-duration: .25s;
 
                     .line {
-                        content:"";
+                        left: -150px;
+                        bottom: 0;
+                        width: 100%;
                         position: absolute;
                         border-bottom: 1px solid $textC;
-                        @include transition (0.3s);
-                        left: -150px;
-                        width: 100%;
-                        bottom: 0;
                         opacity: 0;
                         z-index: 0;
+                        content: '';
+                        @include transition (0.3s);
                     }  
                 }
 
@@ -471,22 +454,18 @@
                     display: flex;
                     flex-direction: column;
                     position: relative;
-
                     & + .chapter {
                         margin-top: 20px;
                     }
-
                     &:hover .line {
                         left: 0px;
                         opacity: 1;
                         z-index: 1;   
                     }
-
                     &:focus .line {
                         left: 0px;
                         opacity: 1;
-                        z-index: 1;
-                        
+                        z-index: 1;  
                     }  
                 }
             }
@@ -494,25 +473,27 @@
     }    
 }
 
-.main {
-    @include container($desktop1);
-    width:100%;
+//main 
 
+.main {
+    width:100%;
+    @include container($desktop1);
+  
     &__container {
         width: 100%;
-        overflow: hidden;
-        position: relative;
-        @include transition (0.5s);
         display: flex;
         justify-content: center;
-        align-items:center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        @include transition (0.5s);
         
         .container__background {
-            z-index:-2;
-            position: absolute;
-            display: flex;
             top: 0;
             height: 100%;
+            display: flex;
+            position: absolute;
+            z-index: -2;
         }
 
         .container__content {
@@ -550,52 +531,44 @@
         .content__text {
             width: 648px;
             transition: 1s ease;
-
             @include max-width($desktop2) {
                 width: 558px
             }
-    
             @include max-width($desktop3) {
                 width: 550px
             }
-
             @include max-width(920px) {
                 width: 100%;
             }
 
-            &-title {
-                h2 {
+            &-title h2 {
                     font-family: $Aleo;
-                    font-style: normal;
-                    font-weight: 400;
                     font-size: 36px;
                     line-height: 40px;
+                    font-weight: 400;
+                    font-style: normal;
                     text-transform: capitalize;
                     color: $textC;
-                }
             }
             &-description {
                 margin: 24px 0 32px;
-
                 @include max-width($tablet) {
                     margin: 24px 0;
                 }
-
                 @include max-width($mobile) {
                     margin: 19px 0 24px;
                 }
                 .content__text-note {
                     font-family: $Josef;
-                    font-style: normal;
-                    font-weight: 300;
                     font-size: 16px;
                     line-height: 28px;
+                    font-weight: 300;
+                    font-style: normal;
                     letter-spacing: 0.1em;
                     color: $textC;
 
                     & + .content__text-note {
                         margin-top: 43px;
-
                         @include max-width($mobile) {
                             margin-top: 37px;
                         }
@@ -603,40 +576,34 @@
                 }
             }
         }
-
         .content__image {
+            margin-left: 24px;
             width: 424px;
             display: flex;
             flex-direction: column;
             align-items:flex-start;
             justify-content: center;
-            margin-left: 24px;
             transition: 1s ease;
-
             @include max-width($desktop2) {
                 width: 461px;
             }
-
-
             @include max-width(1220px) {
                 margin-left: 24px;
                 width: 386px / $desktop3Cont * 100%;
             }
             @include max-width(920px) {
-                margin-left:0;
-                flex-direction: row;
-                width: 100%;
-                justify-content: space-between;
+                margin-left: 0;
                 margin-bottom: 32px;
+                width: 100%;
+                flex-direction: row;
+                justify-content: space-between;
             }
             @include max-width($mobile) {
                 margin-bottom: 37px;
             }
-
             &-photo {
                 transition: 1s ease;
                 display: flex;
-                
                 @include max-width(920px) {
                     width: 348px / $tabletCont * 100%; ;
                 }
@@ -655,14 +622,12 @@
                 & + .content__image-photo {
                     margin-top: 16px;
                     padding-left: 74px;
-
                     @include max-width($desktop2) {
                         padding-left: 111px;
                     }
                     @include max-width(1220px) {
                         padding-left: 36px;
                     }
-
                     @include max-width(995px) {
                         padding-left: 0;
                     }
@@ -681,7 +646,7 @@
     &__container-steps {
         background-color: $grayC;
         width: 100%;
-        
+
         .container__content {
             padding-top: 60px;
             padding-bottom: 60px;
@@ -689,8 +654,6 @@
             justify-content: center;
             text-align: center;
             position: relative;
-            
-
             @include max-width($desktop2) {
                 padding: 80px 0 45px 0;
             }
@@ -701,35 +664,32 @@
                 padding-top: 60px;
                 padding-bottom: 60px;
             }
-
             &-line {
-                position: absolute;
                 width: 872px / $desktop1Cont *100%;
                 height: 90px;
+                position: absolute;
                 @include transition (0.5s);
                 @include max-width($desktop2) {
                     width: 752px / $desktop2Cont * 100%; 
                 }
-                
                 @include max-width($desktop3) {
                     width: 632px / $desktop3Cont * 100%; 
                 }
-                
                 @include max-width($tablet) {
                    width: 0;
                    opacity: 0;
                 }
-                .line__image{
+                .line__image {
                     width: 100%;
                     height: 100%;
                 }
             }
 
             &-chapter {
-                display: flex;
-                align-items:center;
-                justify-content: space-between;
                 width: 84%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
                 @include transition (0.5s);
                 @include max-width($desktop3) {
                     width: 93%;
@@ -741,25 +701,23 @@
                     flex-direction: column;
                  }
                 .chapter__element {
+                    padding-top: 47px;
                     display: flex;
                     text-decoration: none;
-                    padding-top: 47px;
                     @include flex-center-column;
                     @include transition (0.5s);
-
                     @include max-width($tablet) {
                         padding-top: 0;
-
                     }
                     &-icon {
+                        margin-bottom: 4px;
+                        padding: 16px;
                         width: 96px;
                         height: 96px;
-                        @include border-radius(50%);
-                        background-color: $grayC;
-                        padding: 16px;
                         display: flex;
                         z-index:2;
-                        margin-bottom: 4px;
+                        background-color: $grayC;
+                        @include border-radius(50%);
 
                         .icon {
                             width: 100%;
@@ -768,10 +726,10 @@
 
                     &-text {
                         font-family: $Aleo;
-                        font-style: normal;
-                        font-weight: 400;
                         font-size: 36px;
                         line-height: 40px;
+                        font-weight: 400;
+                        font-style: normal;
                         text-transform: capitalize;
                         color: $textC;
                     }
@@ -789,21 +747,16 @@
     }   
     &__container-books {
         padding: 220px 0 120px 0;
-
         @include max-width($tablet) {
             padding: 120px 0;
         }
 
-
         .container__content {
-
             &-article {
-                
                 padding: 44px 32px;
-                background-color: $insertsC;
                 width: 648px;
+                background-color: $insertsC;
                 z-index: 0;
-
                 @include max-width($desktop2) {
                     width: 558px;
                 }
@@ -818,31 +771,28 @@
                 .article__title,
                 .article__text {
                     font-family: $Josef;
-                    font-style: normal;
                     line-height: 28px;
+                    font-style: normal;
                     color: $textC;
                 }
                 .article__title1 {
-                    font-weight: 300;
                     font-size: 20px;
+                    font-weight: 300;
                     letter-spacing: 0.1em;
                 }
-
                 .article__title {
-                    font-weight: 400;
-                    font-size: 20px;
-                    text-transform: uppercase;
                     margin: 16px 0;
+                    font-size: 20px;
+                    font-weight: 400;
+                    text-transform: uppercase;         
                 }
-
-                .article__text{
-                    font-weight: 300;
+                .article__text {
+                    margin-bottom: 24px;
                     font-size: 16px;
                     line-height: 28px;
+                    font-weight: 300;
                     letter-spacing: 0.1em;
                     color: $clText;
-                    margin-bottom: 24px;
-
                     @include max-width($tablet){
                         margin-bottom: 28px;
                     }
@@ -865,34 +815,27 @@
         @include max-width($tablet) {
             padding: 60px 0 120px;
         }
-
         .container__content-response {
             @include flex-center-column;
-
             .response__title {
                 font-family: $Aleo;
-                font-style: normal;
-                font-weight: 400;
+                margin-bottom: 60px;
                 font-size: 36px;
                 line-height: 40px;
+                font-weight: 400;
+                font-style: normal;
                 text-transform: capitalize;
                 color: $textC;
-                margin-bottom: 60px;
             }
-
             .response__content {
                 display: grid;
                 grid-template-columns: repeat(3, 440px / $desktop1Cont * 100%);
                 grid-auto-rows: auto;
-
-                
-
                 @include max-width($desktop2) {
                     grid-template-columns: repeat(3, 380px / $desktop2Cont * 100% );
                 }
                 @include max-width($desktop3) {
-                    grid-template-columns: repeat(3,320px / $desktop3Cont * 100%);
-                    
+                    grid-template-columns: repeat(3,320px / $desktop3Cont * 100%);  
                 }
                 @include max-width(900px) {
                     grid-template-columns: 1fr;
@@ -913,46 +856,43 @@
                     }
                 }
                 &-article {
-                    grid-column: 2/span 2 ;
                     padding: 48px 60px;
                     text-align: left;
-                    background-color: $articleC;
+                    background-color: $grayC;
+                    grid-column: 2/span 2;
                     @include max-width(900px) {
                         grid-column: 1/span 1 ;
                         grid-row: 2;
                     }
-
                     :hover .article__text-icon {
-                        fill: $orangeC;
+                        fill: $greenC;
                     }
                     :focus .article__text-icon {
-                        fill: $orangeC;
+                        fill: $greenC;
                     }
-
                     .article__title,
                     .article__text {
                         font-family: $Josef;
-                        font-style: normal;
                         line-height: 28px;
+                        font-style: normal;
                         color: $textC;
                     }
                     .article__title {
-                        font-weight: 400;
-                        font-size: 20px;
-                        text-transform: uppercase;
                         margin-bottom: 10px;
+                        font-size: 20px;
+                        font-weight: 400;
+                        text-transform: uppercase;
                     }
-
                     .article__text {
-                        font-weight: 300;
                         font-size: 16px;
+                        font-weight: 300;
                         letter-spacing: 0.1em;
 
                         &-icon {
-                            width:20px;
+                            margin-right: 6px;
+                            width: 20px;
                             height: 20px;
                             fill:$blueC;
-                            margin-right: 6px;
                             @include transition(0.5s);
                         }
                     }
@@ -962,8 +902,10 @@
     }   
 }
 
+//footer
+
 .footer {
-    background-color:$footerC;
+    background-color: $footerC;
     @include container($desktop1);
     width:100%;
     
@@ -984,34 +926,30 @@
             width: $tabletCont / $tablet * 100%;
             max-width: $tablet; 
         }
-        @include maxWidth($mobile){
+        @include max-width($mobile){
             width: $mobileCont / $mobile * 100%;
             max-width: $mobile;
         }
-
         &-title {
             font-family: $Josef;
-            font-style: normal;
-            font-weight: 700;
             font-size: 24px;
             line-height: 28px;
+            font-weight: 700;
             letter-spacing: 0.1em;
+            font-style: normal;
             text-transform: uppercase;
             color: $textC;
         }
-
         &-title1 {
             margin:  8px 0 20px;
-
             font-family: $Josef;
-            font-style: normal;
-            font-weight: 400;
             font-size: 14px;
             line-height: 20px;
+            font-weight: 400;
             letter-spacing: 0.2em;
+            font-style: normal;
             color: $textC;
         }
-
         &-socials {
             display: inline-flex;
 
@@ -1020,15 +958,13 @@
                 @include max-width($mobile) {
                     flex-direction: column;
                 }  
-
                 & + .socials__element {
                     margin-left: 32px;
                 }
                 &-link {
                     display: flex;
                     justify-content: center;
-                    align-items:center;
-
+                    align-items: center;
                     &:hover .socials__element-logo {
                         fill: $blueC;
                     }
@@ -1039,10 +975,9 @@
                         fill: $blueC;
                     } 
                 }
-
                 &-logo {
-                    display: inline-flex;
                     height: 32px;
+                    display: inline-flex;
                     fill: $textC;
                     @include transition(0.3s);
                 }
@@ -1052,71 +987,66 @@
 }
 
 .content__text-link {
-    
-    span {
-        font-family: $Aleo;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 20px;
-        text-align: center;
-        letter-spacing: 0.07em;
-        text-transform: uppercase;
-        color: $textC;
-        text-decoration: none;
-    }
-
-    height: 60px;
-    width: 213px;
-    text-decoration: none;
     padding: 20px 32px;
-    position: relative;
-    @include transition(1s);
+    width: 213px;
+    height: 60px;
     display: inline-flex;
     justify-content: center;
-    align-items:center;
+    align-items: center;
+    position: relative;
+    text-decoration: none;
     background-image: url(../images/Rectangle.png);
     background-repeat:no-repeat;
     overflow: hidden;
-
-
+    @include transition(1s);
+    span {
+        font-family: $Aleo;
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 400;
+        letter-spacing: 0.07em;
+        font-style: normal;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $textC;
+    }
     &:before,
     &:after {
-        content: "";
+        width: 213px;
         height: 60px;
-        width: 213px; 
+        display: block;
         position: absolute; 
         z-index: -2;
-        display: block;
+        content: '';
         @include transition(1s); 
     }
     &:before {
+        top: 0;
+        left: -100%;
         background-color: $bookC;
-        top:0;
-        left:-100%;
-        z-index:-1;
+        z-index: -1;
     }
     &:after {
+        top: 0;
+        left: 0;
         background-color: $blueC;
-        top:0;
-        left:0
     }
     &:hover:before {
-        left:0;
+        left: 0;
     }
     &:hover:after {
         left: 213px;
     }
     &:focus:before {
-        left:0; 
+        left: 0; 
     }
     &:focus:after {
         left: 213px;
     }
 }
 
-
-@keyframes slidedownup {
+@keyframes slide {
     0%, 100% {
         transform: translate(0, 0);
         -webkit-transform: translate(0, 0);
@@ -1131,8 +1061,7 @@
         -moz-transform: translate(0px, 10px);
         -ms-transform: translate(0px, 10px);
         -o-transform: translate(0px, 10px);
-    }
-         
+    }    
 }
 
 @keyframes sheen {
@@ -1140,8 +1069,4 @@
       transform: rotateZ(60deg) translate(1em, -9em);
     }
   }
-
-.animate__animated.animate__pulse {
-    animation-iteration-count:infinite;
-    animation-duration: 1.5s;
 }

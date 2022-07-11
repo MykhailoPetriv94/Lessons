@@ -1,78 +1,4 @@
-@mixin flex-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-@mixin flex-end {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-}
-
-@mixin flex-start {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-}
-
-@mixin text ($colorText: $color) {
-    font-size: 16px;
-    line-height: 18px;
-    font-weight: 400;
-    color: $colorText;
-}
-
-@mixin media($width) {
-    @media screen and (max-width: $width) {
-        @content;
-    }
-}
-
-@mixin link {
-    text-decoration: none;
-}
-
-@mixin flex-center-column {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column; 
-}
-
-@mixin flex-left-column {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-    
-}
-
-@mixin flex-between() {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-@mixin container ($screen) {
-    width: 90%;
-    margin: 0 auto;
-    max-width: $screen;
-}
-
-@mixin container-center($desctop,$center) {
-    width: 90%;
-    margin:auto;
-    max-width: $desctop;
-    text-align: $center;
-}
-
-@mixin container-left($screen,$left) {
-    margin:auto;
-    max-width: $screen;
-    text-align: $left;
-}
-
+//main
 
 @mixin font($fontFamily, $fontSize, $fontWeight, $lineHeight, $letterSpacing) {
     font-family: $fontFamily;
@@ -81,6 +7,31 @@
     line-height: $lineHeight;
     letter-spacing: $letterSpacing;
 }
+
+@mixin text ($colorText: $color) {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    color: $colorText;
+}
+
+@mixin link {
+    text-decoration: none;
+}
+
+@mixin max-width($screen) {
+    @media (max-width: $screen) {
+        @content;
+    }
+}
+
+@mixin media($width) {
+    @media screen and (max-width: $width) {
+        @content;
+    }
+}
+
+//others
 
 @mixin transition($time) {
     transition: all $time ease;
@@ -98,6 +49,79 @@
     -o-border-radius: $radius;
 }
 
+@mixin placeholder($col) {
+    &::placeholder,
+    &::-webkit-input-placeholder,
+    &::-moz-placeholder,
+    &:-moz-placeholder,
+    &:-ms-input-placeholder {
+        color: $col;
+    }
+}
+
+//container 
+
+@mixin container ($screen) {
+    margin: 0 auto;
+    width: 90%;
+    max-width: $screen;
+}
+
+@mixin container-left($screen,$left) {
+    margin: auto;
+    max-width: $screen;
+    text-align: $left;
+}
+
+@mixin container-center($desktop,$center) {
+    margin: auto;
+    width: 90%;
+    max-width: $desktop;
+    text-align: $center;
+}
+
+//flex
+
+@mixin flex-start {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-left-column {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@mixin flex-center-column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+}
+
+@mixin flex-between() {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin flex-end {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+//rotate, resize, scale
+
 @mixin rotate($deg) {
     transform: rotate($deg);
     -webkit-transform: rotate($deg);
@@ -107,17 +131,11 @@
 }
 
 @mixin resize($res) {
-    transform:scale($res);
-    -webkit-transform:scale($res);
-    -moz-transform:scale($res);
-    -ms-transform:scale($res);
-    -o-transform:scale($res);
-}
-
-@mixin max-width($screen) {
-    @media (max-width: $screen){
-        @content;
-    }
+    transform: scale($res);
+    -webkit-transform: scale($res);
+    -moz-transform: scale($res);
+    -ms-transform: scale($res);
+    -o-transform: scale($res);
 }
 
 @mixin scale ($sc) {
@@ -126,22 +144,4 @@
     -moz-transform: scale($sc);
     -ms-transform: scale($sc);
     -o-transform: scale($sc);
-}
-
-@mixin placeholder($col) {
-    &::placeholder {
-        color: $col;
-    }
-    &::-webkit-input-placeholder {
-        color:$col;
-    }
-    &::-moz-placeholder {
-        color:$col;
-    }
-    &:-moz-placeholder {
-        color:$col;
-    }
-    &:-ms-input-placeholder {
-        color:$col;
-    }
 }
