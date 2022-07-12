@@ -297,7 +297,6 @@ input[type=search]::-webkit-search-results-decoration {
 .menu .menu__container-logo__text {
   font-family: "Josefin Sans", sans-serif;
   font-size: 24px;
-  line-height: 28px;
   font-weight: 700;
   letter-spacing: 0.1em;
   font-style: normal;
@@ -732,6 +731,7 @@ input[type=search]::-webkit-search-results-decoration {
   line-height: 40px;
   font-weight: 400;
   font-style: normal;
+  text-align: center;
   text-transform: capitalize;
   color: #FFFFFF;
 }
