@@ -1,0 +1,338 @@
+.main {
+
+    &__container {
+        padding: 120px 0;
+        @include container($desktop);
+        @include max-width(960px) {
+           padding-top: 100px;
+           padding-bottom: 100px;
+           width: 95%;
+        }
+        @include max-width(800px) {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+        @include max-width(650px) {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
+        .container__chapter {
+            + .container__chapter {
+                margin: 120px auto;
+            }
+            &-title {
+                margin-bottom: 80px;
+                text-align: center;
+                @include max-width(800px) {
+                    margin-bottom: 60px;
+                }
+                
+                .title {
+                    font-family: $title;
+                    font-weight: $titleFW;
+                    font-size: $titleFS;
+                    line-height: 45px;
+                    letter-spacing: 0.05em;
+                    font-style: normal;
+                    color: $titleCol;
+                    @include max-width(960px) {
+                        font-size: 30px;
+                    }
+                    @include max-width(600px) {
+                        font-size: 28px;
+                    }
+                    @include max-width(550px) {
+                        font-size: 24px;
+                    }
+                }
+            }
+
+            &-grid {
+                display: grid;
+                grid-template-columns: repeat(3, minmax(370px, auto));
+                grid-auto-rows: 370px;
+                gap: 30px; 
+                justify-content: center;
+                @include max-width(1300px) {
+                    grid-template-columns: repeat(3, minmax(350px, auto));
+                    grid-auto-rows: 350px;
+                    gap: 20px;
+                }
+                @include max-width(1300px) {
+                    grid-template-columns: repeat(3, minmax(330px, auto));
+                    grid-auto-rows: 330px;
+                    gap: 20px;
+                }
+                @include max-width(1150px) {
+                    grid-template-columns: repeat(3, minmax(300px, auto));
+                    grid-auto-rows: 300px;
+                    gap: 20px;
+                }
+                @include max-width(1050px) {
+                    grid-template-columns: repeat(3, minmax(270px, auto));
+                    grid-auto-rows: 270px;
+                }
+
+                @include max-width(960px) {
+                    grid-template-columns: repeat(2, minmax(350px, auto));
+                    grid-auto-rows: 350px;
+                    gap: 15px;  
+                }
+
+                @include max-width(800px) {
+                    grid-template-columns: repeat(2, minmax(300px, auto));
+                    grid-auto-rows: 300px;    
+                }
+
+                @include max-width(650px) {
+                    grid-template-columns: repeat(2, minmax(250px, auto));
+                    grid-auto-rows: 250px;    
+                }
+                @include max-width(550px) {
+                    grid-template-columns: repeat(1, minmax(370px, auto));
+                    grid-auto-rows: 370px;    
+                }
+                
+                .grid__element {
+                    position: relative;
+                    overflow: hidden;
+                    cursor: pointer;
+                    @include border-radius(20px);
+                    
+                    &:hover {
+                        & .grid__element-image {
+                            @include resize(1.05);
+                        }
+                        & .grid__element-info {
+                            opacity:0;
+                            z-index:-1;
+                        }
+                        & .opt__start {
+                            opacity:1;
+                        } 
+                    }
+
+                    &:active {
+                        & .grid__element-image {
+                            @include resize(1.05);
+                        }
+                        & .grid__element-info {
+                            opacity:0;
+                            z-index:-1;
+                        }
+                    }
+
+                    &-image {
+                        max-width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        position: absolute;
+                        @include border-radius(20px);
+                        @include transition(0.5s);
+                        @include flex-center; 
+                    }
+                    &-info {
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        position: absolute;
+                        z-index:0;
+                        opacity: 0.4;
+                        background: $gradCol;
+                        background-color:  #FFFFFF;
+                        @include border-radius(20px);
+                        @include transition(0.5s);
+                    }
+                    &-opt {
+                        padding: 20px;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        position: absolute;
+                        flex-direction: column;
+                        z-index: 3;
+                        @include transition(0.5s);
+                        @include max-width(1150px) {
+                            padding: 15px;
+                        }
+
+                        .opt__start {
+                            width: 100%;
+                            display: flex;
+                            justify-content:space-between;
+                            opacity: 0;
+                            @include transition(0.5s);
+                            :hover {
+                                background-color: $backgrhovCol;
+                            }
+                            :active {
+                                background-color: $backgractCol;
+                            }
+                            &-element {
+                                padding: 10px;
+                                border-radius: 8px;
+                                background-color: $backgractCol;
+                                @include flex-center;
+                                @include transition(0.5s); 
+                            }
+                        }
+
+                        .opt__end {
+                            width: 100%;
+                            display: flex;                  
+                            justify-content:space-between;
+
+                            .name {
+                                font-family: $title1;
+                                font-weight: $nameFW;
+                                font-size: $title1FS;
+                                line-height: 23px;
+                                font-style: normal;  
+                                color: $nameCol;
+                                @include max-width(1150px) {
+                                    font-size: 16px;
+                                }
+                                @include max-width(960px) {
+                                    font-size: 14px;
+                                }
+                            }
+    
+                            .date {
+                                font-family: $title1;
+                                font-weight: $dateFW;
+                                font-size: $title1FS;
+                                line-height: 23px;
+                                font-style: normal; 
+                                color: $dateCol;
+                                @include max-width(1150px) {
+                                    font-size: 16px;
+                                }
+                                @include max-width(960px) {
+                                    font-size: 14px;
+                                }
+                            } 
+                        }
+                    }
+                }  
+                
+                .arch {
+                    .grid__element:nth-child(2) {
+                        grid-column: span 2;
+                        grid-row: span 1; 
+                        @include max-width(960px) {
+                            grid-column: span 1;
+                            grid-row: span 1; 
+                        }
+                    }
+                    .grid__element:nth-child(3) {
+                        grid-column: span 2;
+                        grid-row: span 1; 
+                        @include max-width(960px) {
+                            grid-column: span 1;
+                            grid-row: span 1; 
+                        }
+                    }
+                    .grid__element:nth-child(4) {
+                        grid-column: span 1;
+                        grid-row: span 1; 
+                    }    
+                    .grid__element:nth-child(6) {
+                        grid-column: span 2;
+                        grid-row: span 1; 
+                        @include max-width(960px) {
+                            grid-column: span 1;
+                            grid-row: span 1; 
+                        }   
+                    }
+                }
+
+                .still-life {
+                    .grid__element:nth-child(2) {
+                        grid-column: span 2;
+                        grid-row: span 1; 
+                        @include max-width(960px) {
+                            grid-column: span 1;
+                            grid-row: span 1; 
+                        }
+                    }
+                    .grid__element:nth-child(3) {
+                        grid-column: span 2;
+                        grid-row: span 2; 
+                        @include max-width(960px) {
+                            grid-column: span 1;
+                            grid-row: span 2; 
+                        }
+                        @include max-width(550px) {
+                            grid-column: span 1;
+                            grid-row: span 1; 
+                        }   
+                    }
+                    .grid__element:nth-child(4) {
+                        grid-column: span 1;
+                        grid-row: span 2; 
+                        @include max-width(550px) {
+                            grid-column: span 1;
+                            grid-row: span 1; 
+                        }
+                    }
+                    .grid__element:nth-child(5) {
+                        grid-column: span 2;
+                        grid-row: span 1; 
+                        @include max-width(960px) {
+                            grid-column: span 1;
+                            grid-row: span 1; 
+                        }
+                    }
+                }
+
+                .fashion {
+                    .grid__element:nth-child(2) {
+                        grid-column: span 1;
+                        grid-row: span 2; 
+                        @include max-width(550px) {
+                            grid-column: span 1;
+                            grid-row: span 1; 
+                        }
+                    }
+                    .grid__element:nth-child(5) {
+                        grid-column: span 1;
+                        grid-row: span 2; 
+                        @include max-width(550px) {
+                            grid-column: span 1;
+                            grid-row: span 1; 
+                        }
+                    }
+                    .grid__element:nth-child(6) {
+                        grid-column: span 1;
+                        grid-row: span 2; 
+                        @include max-width(550px) {
+                            grid-column: span 1;
+                            grid-row: span 1; 
+                        }
+                    }
+                    .grid__element:nth-child(8){
+                        grid-column: span 2;
+                        grid-row: span 1; 
+                        @include max-width(550px) {
+                            grid-column: span 1;
+                            grid-row: span 1; 
+                        }
+                    }
+                    .grid__element:nth-child(9) {
+                        grid-column: span 2;
+                        grid-row: span 1; 
+                        @include max-width(960px) {
+                            grid-column: span 1;
+                            grid-row: span 1; 
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
