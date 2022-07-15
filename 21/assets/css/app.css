@@ -1,0 +1,503 @@
+@font-face {
+  font-family: 'Bebas Neue Thin';
+  src: url('../fonts/bebasneue/BebasNeue-Thin.eot');
+  src: url('../fonts/bebasneue/BebasNeue-Thin.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/bebasneue/BebasNeue-Thin.woff') format('woff'),
+  url('../fonts/bebasneue/BebasNeue-Thin.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  display: swap;
+}
+
+@font-face {
+  font-family: 'Bebas Neue Light';
+  src: url('../fonts/bebasneue/BebasNeueLight.eot');
+  src: url('../fonts/bebasneue/BebasNeueLight.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/bebasneue/BebasNeueLight.woff') format('woff'),
+  url('../fonts/bebasneue/BebasNeueLight.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  display: swap;
+}
+
+@font-face {
+  font-family: 'Bebas Neue Book';
+  src: url('../fonts/bebasneue/BebasNeueBook.eot');
+  src: url('../fonts/bebasneue/BebasNeueBook.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/bebasneue/BebasNeueBook.woff') format('woff'),
+  url('../fonts/bebasneue/BebasNeueBook.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  display: swap;
+}
+
+  
+@font-face {
+  font-family: 'Bebas Neue Regular';
+  src: url('../fonts/bebasneue/BebasNeueRegular.eot');
+  src: url('../fonts/bebasneue/BebasNeueRegular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/bebasneue/BebasNeueRegular.woff') format('woff'),
+  url('../fonts/bebasneue/BebasNeueRegular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  display: swap;
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.section {
+  height: 913px;
+  background-color: #9789F9;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+ 
+}
+@media screen and (max-width: 1024px) {
+  .section {
+    height: 100%;
+  }
+}
+.section__container {
+  padding: 120px 0;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+@media screen and (max-width: 1024px) {
+  .section__container {
+    width: 93%;
+    padding: 80px 0;
+  }
+}
+@media screen and (max-width: 680px) {
+  .section__container {
+    width: 95%;
+    padding: 50px 0;
+  }
+}
+.section__container .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  height: 673px;
+}
+@media screen and (max-width: 1024px) {
+  .section__container .container {
+    height: 575px;
+  }
+}
+@media screen and (max-width: 680px) {
+  .section__container .container {
+    height: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.section__container .container .card__element {
+  background-color: #F5F3F9;
+  text-align: center;
+  position: relative;
+  width: 30.8333333333%;
+  height: 91.1940298507%;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+@media screen and (max-width: 1024px) {
+  .section__container .container .card__element {
+    height: 84%;
+  }
+}
+@media screen and (max-width: 680px) {
+  .section__container .container .card__element {
+    margin: 0 auto;
+    width: 80%;
+    height: 91.1940298507%;
+  }
+}
+.section__container .container .card__element + .card__element {
+  margin-left: 30px;
+}
+@media screen and (max-width: 680px) {
+  .section__container .container .card__element + .card__element {
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+}
+.section__container .container .card__element:hover {
+  height: 100%;
+  width: 33.3333333333%;
+}
+@media screen and (max-width: 680px) {
+  .section__container .container .card__element:hover {
+    width: 90%;
+  }
+}
+.section__container .container .card__element:hover .header__up {
+  opacity: 1;
+}
+.section__container .container .card__element:hover .section {
+  padding-bottom: 67px;
+}
+.section__container .container .card__element:hover .footer {
+  padding-top: 47px;
+  padding-bottom: 30px;
+}
+@media screen and (max-width: 1024px) {
+  .section__container .container .card__element:hover .footer {
+    padding-top: 37px;
+    padding-bottom: 20px;
+  }
+}
+@media screen and (max-width: 680px) {
+  .section__container .container .card__element:hover .footer {
+    padding-top: 37px;
+    padding-bottom: 20px;
+  }
+}
+.section__container .container .card__element:hover .footer__text {
+  opacity: 1;
+}
+.section__container .container .card__element:hover .footer__button {
+  background-color: #FD8D7B;
+  bottom: 66px;
+}
+@media screen and (max-width: 1024px) {
+  .section__container .container .card__element:hover .footer__button {
+    bottom: 50px;
+  }
+}
+@media screen and (max-width: 680px) {
+  .section__container .container .card__element:hover .footer__button {
+    bottom: 50px;
+  }
+}
+.section__container .container .card__element:hover .header__price {
+  padding-top: 50px;
+  padding-bottom: 40px;
+}
+@media screen and (max-width: 1024px) {
+  .section__container .container .card__element:hover .header__price {
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
+}
+@media screen and (max-width: 680px) {
+  .section__container .container .card__element:hover .header__price {
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+}
+.section__container .container .header {
+  position: relative;
+  background-color: #F5F3F9;
+  overflow: visible;
+}
+.section__container .container .header .header__up {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 3;
+  opacity: 0;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+.section__container .container .header .header__up .up__bubble {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 17px;
+}
+.section__container .container .header .header__up .bubble__small {
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  background-color: #FD8D7B;
+}
+.section__container .container .header .header__up .bubble__big {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  background-color: #FD8D7B;
+}
+.section__container .container .header .header__up .up__text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 20px;
+}
+.section__container .container .header .header__up .text__bubble {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  background-color: #FD8D7B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section__container .container .header .header__up .text__bubble .symbol {
+  font-family: "Bebas Neue Book";
+  font-size: 24px;
+  line-height: 24px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.section__container .container .header .header__up .text__tag {
+  display: inline-flex;
+  position: absolute;
+  right: -87px;
+  top: 25px;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 1024px) {
+  .section__container .container .header .header__up .text__tag {
+    visibility: hidden;
+  }
+}
+.section__container .container .header .header__up .text__tag svg {
+  position: absolute;
+}
+.section__container .container .header .header__up .text__tag span {
+  position: absolute;
+  font-family: "Bebas Neue Book";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.section__container .container .header .header__price {
+  padding-top: 40px;
+  padding-bottom: 30px;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+@media screen and (max-width: 1024px) {
+  .section__container .container .header .header__price {
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+}
+@media screen and (max-width: 680px) {
+  .section__container .container .header .header__price {
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+}
+.section__container .container .header .header__price .price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  display: inline-flex;
+}
+.section__container .container .header .header__price .price .currency {
+  font-family: "Bebas Neue Thin";
+  font-size: 24px;
+  line-height: 28px;
+  color: #181818;
+  position: absolute;
+  top: 0;
+  left: -9px;
+}
+.section__container .container .header .header__price .price .number {
+  font-family: "Bebas Neue Thin";
+  font-size: 60px;
+  line-height: 52px;
+  letter-spacing: 0.08em;
+  color: #000000;
+  width: 52px;
+  height: 46px;
+}
+.section__container .container .header .header__price .price .unit {
+  font-family: "Bebas Neue Thin";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0.08em;
+  color: #000000;
+  position: absolute;
+  bottom: -4px;
+  right: -20px;
+}
+.section__container .container .header .header__price .direction {
+  margin-top: 20px;
+  font-family: "Bebas Neue Book";
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: #000000;
+  text-transform: uppercase;
+}
+.section__container .container .main {
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  background-image: url(../images/bgimage.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-color: #F5F3F9;
+  background-size: cover;
+  overflow: visible;
+}
+@media screen and (max-width: 1024px) {
+  .section__container .container .main {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+@media screen and (max-width: 680px) {
+  .section__container .container .main {
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+}
+.section__container .container .main .main__logo {
+  margin-bottom: 30px;
+  z-index: 2;
+}
+.section__container .container .main .main__text {
+  margin: 0 auto;
+  z-index: 2;
+}
+.section__container .container .main .main__text p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.04em;
+  text-align: left;
+  color: #000000;
+}
+.section__container .container .main .main__text p + p {
+  margin-top: 30px;
+}
+@media screen and (max-width: 1024px) {
+  .section__container .container .main .main__text p + p {
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 680px) {
+  .section__container .container .main .main__text p + p {
+    margin-top: 30px;
+  }
+}
+.section__container .container .footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 19px;
+  padding-bottom: 19px;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  background-color: #F5F3F9;
+}
+.section__container .container .footer .footer__button {
+  background: #6FCFFB;
+  border-radius: 30px;
+  position: absolute;
+  bottom: -27px;
+  font-family: "Bebas Neue Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  padding: 20px 50px;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+@media screen and (max-width: 1024px) {
+  .section__container .container .footer .footer__button {
+    padding: 15px 40px;
+  }
+}
+@media screen and (max-width: 680px) {
+  .section__container .container .footer .footer__button {
+    padding: 15px 80px;
+  }
+}
+.section__container .container .footer .footer__text {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 18px;
+  letter-spacing: 0.04em;
+  color: #A9A9A9;
+  opacity: 0;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+  /*# sourceMappingURL=app.css.map */

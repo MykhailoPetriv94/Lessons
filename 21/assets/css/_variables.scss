@@ -1,0 +1,52 @@
+// screen size //
+
+$desktop: 1200px;
+$tablet: 1024px;
+$mobile: 680px;
+
+
+// colors //
+
+$gray: #A9A9A9;
+$white: #ffffff;
+$backgrCol: #9789F9;
+$textCol:#181818;
+$titleCol: #000000;
+$cardCol: #F5F3F9;
+$buttonCol: #6FCFFB;
+$buttonHovCol: #FD8D7B;
+
+// fonts //
+
+@font-face {
+	font-family: 'Bebas Neue';
+	src: url('BebasNeueBold.eot');
+	src: local('Bebas Neue Bold'), local('BebasNeueBold'),
+		url('BebasNeueBold.eot?#iefix') format('embedded-opentype'),
+		url('BebasNeueBold.woff') format('woff'),
+		url('BebasNeueBold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Bebas Neue';
+	src: url('BebasNeue-Thin.eot');
+	src: local('Bebas Neue Thin'), local('BebasNeue-Thin'),
+		url('BebasNeue-Thin.eot?#iefix') format('embedded-opentype'),
+		url('BebasNeue-Thin.woff') format('woff'),
+		url('BebasNeue-Thin.ttf') format('truetype');
+	font-weight: 100;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Bebas Neue Book';
+	src: url('BebasNeueBook.eot');
+	src: local('Bebas Neue Book'), local('BebasNeueBook'),
+		url('BebasNeueBook.eot?#iefix') format('embedded-opentype'),
+		url('BebasNeueBook.woff') format('woff'),
+		url('BebasNeueBook.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
