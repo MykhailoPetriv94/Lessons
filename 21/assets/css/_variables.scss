@@ -1,21 +1,3 @@
-// screen size //
-
-$desktop: 1200px;
-$tablet: 1024px;
-$mobile: 680px;
-
-
-// colors //
-
-$gray: #A9A9A9;
-$white: #ffffff;
-$backgrCol: #9789F9;
-$textCol:#181818;
-$titleCol: #000000;
-$cardCol: #F5F3F9;
-$buttonCol: #6FCFFB;
-$buttonHovCol: #FD8D7B;
-
 // fonts //
 
 @font-face {
@@ -50,3 +32,21 @@ $buttonHovCol: #FD8D7B;
 	font-weight: normal;
 	font-style: normal;
 }
+
+// screen size //
+
+$desktop: 1200px;
+$tablet: 1024px;
+$mobile: 680px;
+
+
+// colors //
+
+$gray: #A9A9A9;
+$white: #ffffff;
+$backgrCol: #9789F9;
+$textCol:#181818;
+$titleCol: #000000;
+$cardCol: #F5F3F9;
+$buttonCol: #6FCFFB;
+$buttonHovCol: #FD8D7B;
