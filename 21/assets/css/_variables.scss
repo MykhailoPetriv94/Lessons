@@ -23,6 +23,17 @@
 }
 
 @font-face {
+    font-family: 'Bebas Neue Regular';
+    src: url('../fonts/bebasneue/BebasNeueRegular.eot');
+    src: url('../fonts/bebasneue/BebasNeueRegular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/bebasneue/BebasNeueRegular.woff') format('woff'),
+    url('../fonts/bebasneue/BebasNeueRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    display: swap;
+}
+
+@font-face {
 	font-family: 'Bebas Neue Book';
 	src: url('BebasNeueBook.eot');
 	src: local('Bebas Neue Book'), local('BebasNeueBook'),
