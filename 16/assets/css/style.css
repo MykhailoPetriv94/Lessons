@@ -245,7 +245,7 @@ a {
 
 .blog__article-link {
     text-decoration: none;
-    color: var(--black);
+    color: var(--grey-700);
 }
 
 .article__container {
@@ -257,12 +257,19 @@ a {
     justify-content: flex-start;
 }
 
+.article__padd-left {
+    padding-left: 120px;
+    padding-right: 0;
+}
+
 .article__image-content {
     display: flex;
 }
 
 .article__container .text__description {
     padding-top: 50px;
+    max-width: 448px;
+    letter-spacing: 0.05em;
 }
 
 .blog__article--flex-row-reverse .article__container {
@@ -285,6 +292,7 @@ a {
     font-size: 23px;
     line-height: 166%;
     padding-bottom: 20px;
+    color: var(--black);
 }
 
 .blog .text__title {
