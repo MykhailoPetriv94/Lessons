@@ -245,7 +245,7 @@ a {
 
 .blog__article-link {
     text-decoration: none;
-    color: var(--black);
+    color: var(--grey-700);
 }
 
 .article__container {
@@ -257,12 +257,19 @@ a {
     justify-content: flex-start;
 }
 
+.article__padd-left {
+    padding-left: 120px;
+    padding-right: 0;
+}
+
 .article__image-content {
     display: flex;
 }
 
 .article__container .text__description {
     padding-top: 50px;
+    max-width: 448px;
+    letter-spacing: 0.05em;
 }
 
 .blog__article--flex-row-reverse .article__container {
@@ -274,7 +281,9 @@ a {
 .text__date {
     color: var(--grey-500);
 }
-
+.text__note {
+    color: var(--grey-700)
+}
 .article__heading {
     font-size: 12px;
     padding-top: 25px;
@@ -285,6 +294,7 @@ a {
     font-size: 23px;
     line-height: 166%;
     padding-bottom: 20px;
+    color: var(--black);
 }
 
 .blog .text__title {
@@ -301,16 +311,17 @@ a {
 }
 
 .text__arrow::before {
-    display: none;
-    content: 'Read more';
+    transform: translateX(-100%, -100%);
+    content: '';
     padding-right: 5px;
     color: var(--white);
     font-size: 16px;
-    transition: color 0.35s ease-in-out;
+    transition: all .4s ease-in-out;
 }
 
 .text__arrow:hover::before {
-    display: inline-block;
+    content: 'Read more';
+    transform: translateX(0);
     color: var(--black);
 }
 
@@ -367,11 +378,10 @@ a {
     padding-left: 30px;
 }
 
-/*
 .posts__article img {
     width: 100%;
 }
-*/
+
 
 .popular__heading {
     margin-bottom: 46px;
@@ -416,6 +426,7 @@ a {
     color: var(--white);
     cursor: pointer;
     background: var(--grey-700);
+    transition: all .4s ease;
 }
 
 .popular__button-loadmore:hover {
@@ -594,6 +605,7 @@ path {
     .info__article.info__article-description {
         margin-top: 50px;
         width: 100%;
+        text-align: right;
     }
 
     .description__note + .description__note {
@@ -619,6 +631,7 @@ path {
     .footer__socials {
         width: 50%;
         margin: 0 auto;
+        margin-bottom: 40px;
     }
 
     .footer__copyright {
@@ -801,6 +814,9 @@ path {
         margin-top: 50px;
         margin-bottom: 40px;
     }
+    .footer__copyright {
+        margin-bottom: 50px;
+    }
 }
 
 @media screen and (max-width: 760px) {
@@ -829,8 +845,7 @@ path {
 
     .blog image {
         max-width: 100%;
-    }
-
+    } 
     .blog .article__image-content,
     .article__container {
         width: 100%;
